@@ -33,7 +33,7 @@ jobs:
           files: |
 $autoworkflowfiles$
       - name: Publish-Fabric
-      - uses: Kir-Antipov/mc-publish@v3.2
+        uses: Kir-Antipov/mc-publish@v3.2
         with:
           modrinth-id: $modrinthid$
           modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
@@ -41,4 +41,4 @@ $autoworkflowfiles$
 #          curseforge-id: $curseforgeid$
 #          curseforge-token: ${{ secrets.CURSEFORGE_TOKEN }}  
           loaders: fabric
-          files: *Fabric/build/libs/!(*-@(dev|sources|javadoc|all)).jar
+          files: '*Fabric/build/libs/!(*-@(dev|sources|javadoc|all)).jar'
