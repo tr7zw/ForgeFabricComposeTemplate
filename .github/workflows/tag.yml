@@ -38,7 +38,7 @@ $autoworkflowfiles$
           modrinth-id: $modrinthid$
           modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
 
-#          curseforge-id: $curseforgeid$
-#          curseforge-token: ${{ secrets.CURSEFORGE_TOKEN }}  
+          curseforge-id: $curseforgeid$
+          curseforge-token: ${{ secrets.CURSEFORGE_TOKEN }}  
           loaders: fabric
           files: '*Fabric/build/libs/!(*-@(dev|sources|javadoc|all)).jar'
