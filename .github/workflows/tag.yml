@@ -23,6 +23,18 @@ jobs:
         with:
           files: |
 $autoworkflowfiles$
+      - name: Publish-Forge
+        uses: Kir-Antipov/mc-publish@v3.2
+        with:
+          modrinth-id: $modrinthid$
+          modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
+
+          curseforge-id: $curseforgeid$
+          curseforge-token: ${{ secrets.CURSEFORGE_TOKEN }}  
+          loaders: forge
+          version: ${{github.ref_name}} - Forge
+          version-type: beta
+          files: '*Forge/build/libs/!(*-@(dev|sources|javadoc|all)).jar'
       - name: Publish-Fabric
         uses: Kir-Antipov/mc-publish@v3.2
         with:
@@ -32,4 +44,5 @@ $autoworkflowfiles$
           curseforge-id: $curseforgeid$
           curseforge-token: ${{ secrets.CURSEFORGE_TOKEN }}  
           loaders: fabric
+          version: ${{github.ref_name}} - Fabric
           files: '*Fabric/build/libs/!(*-@(dev|sources|javadoc|all)).jar'
