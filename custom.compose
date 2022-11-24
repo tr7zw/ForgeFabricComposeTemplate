@@ -3,3 +3,4 @@
 - VersionShared/src/main/java/dev/tr7zw/donor/DonorSettings.java
 - VersionShared/src/main/java/dev/tr7zw/donor/DonorSkinProvider.java
 - VersionShared/src/main/java/dev/tr7zw/donor/ImageLoader.java
+- .github/FUNDING.yml
