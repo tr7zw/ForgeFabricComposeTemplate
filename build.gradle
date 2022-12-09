@@ -16,12 +16,12 @@ subprojects {
 	}
 
 	configurations {
-		include
-		implementation.extendsFrom include
+		inc
+		implementation.extendsFrom inc
 	}
 
 	shadowJar {
-		configurations = [project.configurations.include]
+		configurations = [project.configurations.inc]
 		relocate 'dev.tr7zw.donor', '$relocationpackage$.donor'
 		relocate 'dev.tr7zw.config', '$relocationpackage$.config'
 	}
